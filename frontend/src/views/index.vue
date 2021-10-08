@@ -13,40 +13,25 @@
         <el-button type="danger" size="small" auto @click="delAccount">删除CK</el-button>
       </div>
     </div>
-    
+     
     <div class="card">
       <div class="card-header">
-          <p class="card-title">WSCK 录入</p>
-            <div class="card-body text-base leading-6">
-              <b>wskey有效期长达一年，请联系管理员确认使用，慎重！</b>
-              <p>删WSCK在下方。</p>
-              <b>也可以保持pin不变，随意更改wskey，等同于删除WSCK。改密码解决一切CK泄露问题。</b>
-              <p>用户须手动提取pin和wskey，格式如："pin=xxxxxx;wskey=xxxxxxxxxx;"。</p>
-              <p class="card-subtitle">——IOS用户手机抓包APP&emsp;<a style="" href="https://apps.apple.com/cn/app/stream/id1312141691" target="_blank" id="downiOSApp">点击跳转安装</a> </p>
-              <p class="card-subtitle">——在api.m.jd.com域名下找POST请求大概率能找到wskey。</p>
-              <p class="card-subtitle">wskey在录入后立马上线，系统会在指定时间检查wskey，有效则自动转换出cookie登录</p>
-              <p class="card-subtitle">cookie失效后，也会在系统设定的指定时间内自动转换出新的cookie，实现一次录入长期有效</p>
-              <b>wskey会随着京东app的退出登录和更改密码而失效，清楚app数据或者卸载软件不会影响。</b>
-            </div>
-      </div>
-      <div class="card-body text-center">
-        <el-input v-model="jdwsck" placeholder="pin=xxxxxx;wskey=xxxxxxxxxx;" size="small" clearable class="my-4 w-full" />
-      </div>
-      <div class="card-footer">
-        <el-button type="success" size="small" auto @click="WSCKLogin">重新录入</el-button>
-        <el-button type="danger" size="small" auto @click="delWSCKAccount">删除WSCK</el-button>
-      </div>
-    </div>
-    
-    <div class="card">
-      <div class="card-header">
-        <p class="card-title">修改备注（CK和WSCK同步）</p>
+        <p class="card-title">修改备注（推送显示的名称）</p>
       </div>
       <div class="card-body text-center">
         <el-input v-model="remark" size="small" clearable class="my-4 w-full" />
       </div>
       <div class="card-footer">
         <el-button type="success" size="small" auto @click="changeremark">修改</el-button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <p class="card-title">推送二维码</p>
+          <div class="card-body text-base leading-6">
+            <p>微信扫一扫<a style="" href="/push.jpg" target="_blank" id="vx">点击打开</a> </p>
+          </div>
       </div>
     </div>
     
