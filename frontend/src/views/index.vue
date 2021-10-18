@@ -34,7 +34,24 @@
           </div>
       </div>
     </div>
-    
+
+    <!--推送卡片-->
+    <div class="Card ant-card ant-card-bordered" v-show="pushIsShow">
+      <div class="ant-card-head">
+        <div class="ant-card-head-wrapper">
+          <a-icon type="pushpin" theme="twoTone" />
+          <div class="ant-card-head-title">
+            扫码接收通知
+          </div>
+        </div>
+      </div>
+
+      <div class="ant-card-body">
+        <a-spin :spinning="!pushLoding">
+          <img class="img" :src="push" />
+        </a-spin>
+      </div>
+
     <div class="card">
       <div class="card-header">
         <p class="card-title">常见活动位置</p>
