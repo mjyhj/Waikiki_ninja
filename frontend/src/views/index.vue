@@ -51,6 +51,7 @@
           <img class="img" :src="push" />
         </a-spin>
       </div>
+    </div>
 
     <div class="card">
       <div class="card-header">
